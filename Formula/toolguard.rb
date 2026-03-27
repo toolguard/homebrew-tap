@@ -5,21 +5,21 @@
 class Toolguard < Formula
   desc "AI-powered security proxy for MCP servers"
   homepage "https://toolguard.ai"
-  version "0.5.13"
+  version "0.5.14"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/toolguard/toolguard/releases/download/v0.5.13/toolguard_Darwin_x86_64.tar.gz"
-      sha256 "8b7b0ee0e4d86e3123f5a8d13b9a742c563bcbb5cca57d7cdaca7eae11e6ced3"
+      url "https://github.com/toolguard/toolguard/releases/download/v0.5.14/toolguard_Darwin_x86_64.tar.gz"
+      sha256 "6a367bb42b0985d84c77433cadb67a2c608ba1e086529acfd212fb70dd692552"
 
       define_method(:install) do
         bin.install "toolguard"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/toolguard/toolguard/releases/download/v0.5.13/toolguard_Darwin_arm64.tar.gz"
-      sha256 "fa18c63ffe1e161d360c862ff9ad13b37ec8815e078c32e51b7fd1da144e4a44"
+      url "https://github.com/toolguard/toolguard/releases/download/v0.5.14/toolguard_Darwin_arm64.tar.gz"
+      sha256 "0dd75c598a76196503f94305328db7c0172210c8303852160c2a69367190070c"
 
       define_method(:install) do
         bin.install "toolguard"
@@ -29,15 +29,15 @@ class Toolguard < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/toolguard/toolguard/releases/download/v0.5.13/toolguard_Linux_x86_64.tar.gz"
-      sha256 "1d8ad7bc57af0b5dcfd304abbbb479e9cd24a534db8d5b83f7947a178fd66e7e"
+      url "https://github.com/toolguard/toolguard/releases/download/v0.5.14/toolguard_Linux_x86_64.tar.gz"
+      sha256 "1caef1ced32eeaa81955227c3a34a09f727fb8ff22017a5e75fa9cd8c28c027b"
       define_method(:install) do
         bin.install "toolguard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/toolguard/toolguard/releases/download/v0.5.13/toolguard_Linux_arm64.tar.gz"
-      sha256 "8cd099271b3ba31661940147dbf61ee8afe0525c5008534157a650454b95279f"
+      url "https://github.com/toolguard/toolguard/releases/download/v0.5.14/toolguard_Linux_arm64.tar.gz"
+      sha256 "4ec1542a8a68379db50a2a8b93496a8567841cdd9b031b470657a3839329537f"
       define_method(:install) do
         bin.install "toolguard"
       end
